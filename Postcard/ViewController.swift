@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var buttonSendMail: UIButton!
+    @IBOutlet weak var labelNumberTwo: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,12 @@ class ViewController: UIViewController {
         messageLabel.hidden = false
         messageLabel.text = enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
+        labelNumberTwo.hidden = false
+        labelNumberTwo.text = enterNameTextField.text
+        labelNumberTwo.textColor = UIColor.purpleColor()
         
+        
+        enterNameTextField.text = ""
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
         
